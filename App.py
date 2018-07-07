@@ -103,7 +103,7 @@ def change_variable_list(env_id,id):
 def delete_variable_list(env_id,id):
     #first_or_404() 返回查的第一个结果，如果没有结果，则终止请求，返回 404 错误响应
     variablelists = Variable.query.filter_by(env_id=env_id, id=id).join(Environments,Variable.env_id == Environments.id).first_or_404()
-    # delete()删数据你好
+    # delete(ssssss)删数据你好
     db.session.delete(variablelists)
     db.session.commit()
     flash('You have delete a variable')
